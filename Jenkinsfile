@@ -3,8 +3,14 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-		sh 'docker build -t av-app-image .' 
+		 echo 'ss'
             }
+   	 stage('Docker Build') {
+	      agent any
+	      steps {
+		sh 'docker build -t av-app-image .'
+	      }
+	    }
         }
     }
 }
