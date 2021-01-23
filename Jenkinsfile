@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-		docker build -t av-app-image 
+		sh 'docker build -t av-app-image' 
             }
         }
     }
