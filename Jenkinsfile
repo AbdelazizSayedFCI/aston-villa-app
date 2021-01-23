@@ -9,7 +9,9 @@ pipeline {
    	 stage('Docker Build') {
 	      agent any
 	      steps {
-		sh 'docker build -t av-app-image .'
+script {
+dockerImage = docker.build 'sss'
+}
 	      }
 	    }
     }
