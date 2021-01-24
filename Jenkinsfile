@@ -9,9 +9,9 @@ pipeline {
    	 stage('Docker Build') {
 	      agent any
 	      steps {
-script {
-sh 'docker build -t appss .'
-}
+
+docker build -t appss .
+
 	      }
 	    }
     }
