@@ -10,7 +10,7 @@ pipeline {
 	      agent any
 	      steps {
 script {
-docker build -t appss .
+sh 'docker build -t appss .'
 }
 	      }
 	    }
