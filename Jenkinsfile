@@ -9,9 +9,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
-              sh 'npm i @angular/compiler-cli@7.1.4' 
+                sh 'npm install'                 
+              sh 'npm run build'                 
             }
         }
+      stage('Deliver')
+      steps {
+        sh 'npm i @angular/compiler-cli@7.1.4'
+      }
     }
 }
