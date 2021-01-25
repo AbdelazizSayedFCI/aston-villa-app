@@ -4,7 +4,7 @@ agent { dockerfile true }
     stages {
         stage('Build') { 
             steps {
-                sh 'ng serve'
+                sh 'npm build'
             }
         }
     }
