@@ -12,10 +12,10 @@ pipeline {
                 sh 'npm install'                 
               sh 'npm run build'                 
             }
+        stage('Deliver')
+             steps {
+               sh 'npm i @angular/compiler-cli@7.1.4'
+             }          
         }
-      stage('Deliver')
-      steps {
-        sh 'npm i @angular/compiler-cli@7.1.4'
-      }
     }
 }
