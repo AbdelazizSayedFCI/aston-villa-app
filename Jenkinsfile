@@ -4,7 +4,7 @@ agent { dockerfile true }
     stages {
         stage('Build') { 
             steps {
-                sh 'npm build'
+                sh 'npm run build'
             }
         }
     }
