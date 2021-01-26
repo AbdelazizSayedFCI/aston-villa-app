@@ -13,11 +13,5 @@ pipeline {
             sh 'npm run build'                 
           }
       }
-      stage('Deliver')
-      {
-           steps {
-             sh 'npm i @angular/compiler-cli@7.1.4'
-           }          
-      }
   }
 }
