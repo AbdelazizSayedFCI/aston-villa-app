@@ -3,7 +3,7 @@ pipeline {
   agent{
         docker {
             image 'node:12.7-alpine'
-            args '-p 1200:4200'
+            args '-p 4200:4200'
         }
   }
   stages {
@@ -15,7 +15,8 @@ pipeline {
       }
       stage('Deliver') { 
           steps {                     
-            sh 'npm run start'            
+            sh 'npm run start & sleep 1'      
+            input message: 'Finished using the web site? (Click "Proceed" to continue)'
           }
       }    
   }
