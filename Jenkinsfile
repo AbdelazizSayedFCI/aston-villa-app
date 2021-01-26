@@ -16,7 +16,7 @@ pipeline {
       stage('Deliver') { 
           steps {
               sh 'npm i @angular/cli@7.1.4'            
-            sh 'ng serve'            
+            sh 'npm run'            
           }
       }    
   }
