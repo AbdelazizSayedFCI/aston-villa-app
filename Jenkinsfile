@@ -11,7 +11,11 @@ pipeline {
       }
       steps {        
         sh 'npm install'   
-        sh 'npm run build'                 
+        sh 'npm run build'   
+        dir('/usr/src/app/dist/aston-villa-app'){
+          stash name: 'build artifact', includes '**'
+        }
+        
       }
     }
     stage('deliver') 
