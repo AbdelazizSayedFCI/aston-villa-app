@@ -20,6 +20,10 @@ phases:
       # - echo testing...
       # - echo building...
       - ng build --prod
+      
+  test:
+    commands:
+      - ng test
 artifacts:
   files:
     - "**/*"
