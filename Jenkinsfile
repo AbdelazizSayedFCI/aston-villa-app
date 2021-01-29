@@ -1,13 +1,15 @@
 pipeline {
 
-   agent { dockerfile true }
+
   
   stages {
-
-      stage('Deliver') { 
+         docker {
+            image 'node:12.7-alpine'
+            args '-p 4200:4200'
+        }
+      stage('Build') { 
           steps {                     
-            sh 'npm run start'      
-            input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+            sh 'npm run build'                 
           }
       }    
   }
