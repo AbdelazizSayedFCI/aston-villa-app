@@ -30,7 +30,7 @@ phases:
       
   post_build:
     commands:
-      - npm run test:ci
+      - ng test --no-watch --browsers=ChromeHeadless
 artifacts:
   files:
     - "**/*"
