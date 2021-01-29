@@ -17,7 +17,7 @@ phases:
       
       
       # Upgrade apt
-      - apt-get upgrade
+      # apt-get upgrade
             # Update libs
       - apt-get update
           # Install apt-transport-https
