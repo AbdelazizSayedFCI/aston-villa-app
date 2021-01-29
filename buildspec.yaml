@@ -13,7 +13,7 @@ phases:
       - npm i -g @angular/cli
       # Install puppeteer as a dev dependency
       - npm i -D puppeteer
-      - npm i –D @angular-devkit/build-angular
+      - npm i @angular-devkit/build-angular
       
       
       # Upgrade apt
