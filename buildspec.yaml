@@ -24,7 +24,7 @@ phases:
       
   post_build:
     commands:
-      -npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 artifacts:
   files:
     - "**/*"
