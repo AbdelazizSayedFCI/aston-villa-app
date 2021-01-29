@@ -21,7 +21,7 @@ phases:
       # - echo building...
       - ng build --prod
       
-  test:
+  post_build:
     commands:
       - ng test
 artifacts:
