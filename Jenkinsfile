@@ -14,7 +14,7 @@ pipeline {
         sh 'npm run build'                 
       }
     }
-    stage('Run') 
+    stage('deliver') 
     { 
       agent{
           docker {
