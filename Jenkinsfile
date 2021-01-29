@@ -13,7 +13,7 @@ pipeline {
         sh 'npm install'   
         sh 'npm run build'                             
       }
-      node{
+      node("sssssss"){
         stash name: 'build artifact', includes '/usr/src/app/dist/aston-villa-app/**'
       }
     }
