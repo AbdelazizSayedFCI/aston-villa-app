@@ -9,7 +9,8 @@ pipeline {
               args '-p 3000:3000'
           }
       }
-      steps {                     
+      steps {        
+        sh 'npm install'   
         sh 'npm run build'                 
       }
     }
