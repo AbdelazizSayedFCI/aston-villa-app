@@ -10,7 +10,13 @@ phases:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
       - apt install --no-install-recommends yarn
-      - curl https://intoli.com/install-google-chrome.sh | bash
+            # Update libs
+      - apt-get update
+      # Headless Chrome
+      - apt-get install -y fonts-liberation libasound2 libnspr4 libnss3 libx11-xcb1 xdg-utils libxss1 libappindicator1 libindicator7
+      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - dpkg -i google-chrome*.deb
+      
   pre_build:
     commands:
       - echo installing dependencies...
@@ -24,7 +30,7 @@ phases:
       
   post_build:
     commands:
-      - ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - npm run test:ci
 artifacts:
   files:
     - "**/*"
