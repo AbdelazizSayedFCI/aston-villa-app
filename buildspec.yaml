@@ -43,7 +43,7 @@ phases:
       # - echo buuilding...
       
       - ng build --prod
-      - ng test --watch=false
+      - npm run test
       
 artifacts:
   files:
