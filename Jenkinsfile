@@ -11,7 +11,8 @@ pipeline {
 		  steps {       
 		  	sh 'npm run test'       
 		  	sh 'npm run lint'   
-			junit 'build/reports/**/*.xml'
+			sh 'dir'
+			junit 'dist/**/*.xml'
 		  }
 		}
 	}
