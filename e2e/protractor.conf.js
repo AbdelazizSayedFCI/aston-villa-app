@@ -2,6 +2,7 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+const {jasmineReporters} = require('jasmine-reporters');
 
 exports.config = {
 	
@@ -26,13 +27,13 @@ exports.config = {
     defaultTimeoutInterval: 30000,
     print: function() {}
   },
-	onPrepare: function(){
-	//configure junit xml report
-	var jasmineReporters = require('jasmine-reporters');
-	jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+    onPrepare() {
+    require('ts-node').register({
+      project: require('path').join(__dirname, './tsconfig.e2e.json')
+    });
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 				 consolidateAll: true,
 				 filePrefix: 'guitest-xmloutput',
-				 savePath: '.'
-	}));
-	}
+				 savePath: '.');
+  }
 };
