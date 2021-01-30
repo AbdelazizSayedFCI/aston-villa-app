@@ -36,4 +36,5 @@ exports.config = {
 				 filePrefix: 'guitest-xmloutput',
 				 savePath: '.'));
   }
+	}
 };
