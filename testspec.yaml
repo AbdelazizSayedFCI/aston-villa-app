@@ -1,4 +1,3 @@
-
 version: 0.1
 
 phases:
@@ -15,18 +14,16 @@ phases:
       
       
   pre_build:
-    commands:
-      - npm install
+    commands:      
 
   build:
     commands:
       # - echo testing...
       # - echo buuildsing...
-      
-      - ng build --prod
+
       - npm run test
-      - npm lint
-      - npm e2e       
+      - npm run lint
+      
 artifacts:
   files:
     - "**/*"
