@@ -34,7 +34,7 @@ exports.config = {
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 				 consolidateAll: true,
 				 filePrefix: 'guitest-xmloutput',
-				 savePath: '.'});
+				 savePath: '.'}));
   }
 
   }
