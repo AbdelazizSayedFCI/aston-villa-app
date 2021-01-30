@@ -23,8 +23,6 @@ phases:
       # - echo buuildsing...
       
       - ng build --prod
-      - npm run test
-      - npm run lint
       
 artifacts:
   type: zip
