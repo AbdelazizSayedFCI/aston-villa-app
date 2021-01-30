@@ -12,6 +12,6 @@ describe('angularjs homepage todo list', function() {
   it('should add a todo', function() {
     browser.get('/');
     var text = element(by.css('app-root a')).getText();
-    expect(text).toEqual('Aston Villa Dashboard');
+    expect(text).toEqual('Aston Villa Dashboards');
   });
 });
