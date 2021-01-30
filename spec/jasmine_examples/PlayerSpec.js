@@ -2,7 +2,7 @@ describe("Player", function() {
 	var reporters = require('jasmine-reporters');
 
 var junitReporter = new reporters.JUnitXmlReporter({
-  savePath: './',
+  savePath: './dist',
   filePrefix: 'jasssss',
   consolidateAll: true
 });
