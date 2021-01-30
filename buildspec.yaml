@@ -24,7 +24,6 @@ phases:
       
       - ng build --prod
       - npm run test
-      - npm run e2e
       - npm run lint
       
 artifacts:
