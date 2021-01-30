@@ -27,6 +27,7 @@ phases:
       - npm run lint
       
 artifacts:
+  type: zip
   files:
     - "**/*"
   discard-paths: no
