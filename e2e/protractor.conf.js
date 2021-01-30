@@ -26,10 +26,13 @@ exports.config = {
     defaultTimeoutInterval: 30000,
     print: function() {}
   },
-  onPrepare() {
-    require('ts-node').register({
-      project: require('path').join(__dirname, './tsconfig.e2e.json')
-    });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
-  }
+	onPrepare: function(){
+	//configure junit xml report
+	var jasmineReporters = require('jasmine-reporters');
+	jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+				 consolidateAll: true,
+				 filePrefix: 'guitest-xmloutput',
+				 savePath: '.'
+	}));
+	}
 };
