@@ -23,9 +23,18 @@ phases:
       # - echo buuildsing...
       
       - ng build --prod
+      - npm run test
+      - npm run lint
       
 artifacts:
-  type: zip
   files:
     - "**/*"
+  discard-paths: no
+  base-directory: dist/aston-villa-app
   
+reports:
+  jasmine_reports:
+    files:
+      - "jasssss.xml"
+    file-format: JUNITXML
+    base-directory: dist
