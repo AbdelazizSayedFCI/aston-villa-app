@@ -30,11 +30,5 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/aston-villa-app
+  base-directory: /
   
-reports:
-  jasmine_reports:
-    files:
-      - "jasssss.xml"
-    file-format: JUNITXML
-    base-directory: dist
