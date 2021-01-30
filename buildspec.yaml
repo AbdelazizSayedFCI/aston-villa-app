@@ -42,12 +42,12 @@ artifacts:
   base-directory: dist/aston-villa-app
   
 reports:
-  jasmine_reports:
+  Unit_Test_Report:
     files:
       - "unit_tests.xml"
     file-format: JUNITXML
     base-directory: dist
-  jasmine_reports2:
+  E2E_Test_Report:
     files:
       - "e2e_tests.xml"
     file-format: JUNITXML
