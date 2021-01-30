@@ -11,6 +11,7 @@ pipeline {
 		  steps {       
 		  	sh 'npm run test'       
 		  	sh 'npm run lint'   
+			sh 'npm run e2e'   
 			junit 'dist/**/*.xml'
 		  }
 		}
