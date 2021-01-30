@@ -3,7 +3,7 @@ describe("Player", function() {
 
 var junitReporter = new reporters.JUnitXmlReporter({
   savePath: './dist',
-  filePrefix: 'jasssss',
+  filePrefix: 'unit_tests',
   consolidateAll: true
 });
 
