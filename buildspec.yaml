@@ -44,6 +44,6 @@ artifacts:
 reports:
   jasmine_reports:
     files:
-      - "jasssss.xml"
+      - "unit_tests.xml"
     file-format: JUNITXML
     base-directory: dist
