@@ -4,6 +4,13 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
+	var reporters = require('jasmine-reporters');
+
+	var junitReporter = new reporters.JUnitXmlReporter({
+	  savePath: './dist',
+	  filePrefix: 'e2e_tests',
+	  consolidateAll: true
+	});
   allScriptsTimeout: 11000,
   specs: [
     './src/**/*.e2e-spec.ts'

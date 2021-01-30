@@ -47,3 +47,9 @@ reports:
       - "unit_tests.xml"
     file-format: JUNITXML
     base-directory: dist
+  jasmine_reports:
+    files:
+      - "e2e_tests.xml"
+    file-format: JUNITXML
+    base-directory: dist
+    
