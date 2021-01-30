@@ -30,6 +30,4 @@ artifacts:
   type: zip
   files:
     - "**/*"
-  discard-paths: no
-  base-directory: /
   
