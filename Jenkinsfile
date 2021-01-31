@@ -12,12 +12,13 @@ pipeline {
 		  	sh 'npm run test'       
 		  	sh 'npm run lint'   
 			 //sh 'npm run e2e'   
-		  	junit 'dist/**/*.xml'
+		  	
 		  }
 		}
 	}
     post {
         always {
+			junit 'dist/**/*.xml'
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }	
